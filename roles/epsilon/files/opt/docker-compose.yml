@@ -93,27 +93,27 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
-  unifi:
-    image: linuxserver/unifi
-    container_name: unifi
-    network_mode: host
-    volumes:
-      - /opt/appdata/unifi:/config
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-  deluge:
-    image: linuxserver/deluge
-    container_name: deluge
-    network_mode: host
-    volumes:
-      - /opt/appdata/deluge:/config
-      - /mnt/disk1/downloads:/downloads
-      - /mnt/storage:/mnt/storage
-    restart: always
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
+#  unifi:
+#    image: linuxserver/unifi
+#    container_name: unifi
+#    network_mode: host
+#    volumes:
+#      - /opt/appdata/unifi:/config
+#    environment:
+#      - PUID=${PUID}
+#      - PGID=${PGID}
+#  deluge:
+#    image: linuxserver/deluge
+#    container_name: deluge
+#    network_mode: host
+#    volumes:
+#      - /opt/appdata/deluge:/config
+#      - /mnt/disk1/downloads:/downloads
+#      - /mnt/storage:/mnt/storage
+#    restart: always
+#    environment:
+#      - PUID=${PUID}
+#      - PGID=${PGID}
   sync:
     image: linuxserver/resilio-sync
     container_name: sync
